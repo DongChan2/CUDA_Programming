@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build: vec_add_large",
+      "type": "shell",
+      "command": "mkdir -p bin && nvcc 5_1_vecAdd_large/5_1.cu 5_1_vecAdd_large/DS_timer.cpp -o bin/vec_add_large -std=c++11",
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "detail": "5_1_vecAdd_large 예제를 빌드합니다."
+    },
+    {
+      "label": "build: mat_add_2d_index",
+      "type": "shell",
+      "command": "mkdir -p bin && nvcc 5_2_MatAdd_2D_index/5_2.cu -o bin/mat_add_2d_index -std=c++11",
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "detail": "5_2_MatAdd_2D_index 예제를 빌드합니다."
+    },
+    {
+      "label": "build: mat_add_large",
+      "type": "shell",
+      "command": "mkdir -p bin && nvcc 5_3_LargeMatrix_Add/main.cpp 5_3_LargeMatrix_Add/MatAdd_LargeMatrix.cu 5_3_LargeMatrix_Add/DS_timer.cpp -o bin/mat_add_large -Xcompiler -std=c++11",
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "detail": "5_3_LargeMatrix_Add 예제를 빌드합니다."
+    }
+  ]
+}
